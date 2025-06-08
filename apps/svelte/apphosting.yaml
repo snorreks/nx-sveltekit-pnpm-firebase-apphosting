@@ -1,0 +1,31 @@
+version: v1
+
+# Runtime configuration
+runtime:
+  nodeVersion: "20"
+  automaticScaling:
+    minInstances: 0
+    maxInstances: 100
+
+# Build configuration
+scripts:
+  buildCommand: pnpm nx build svelte
+  runCommand: node apps/svelte/build/index.js
+
+# Resource configuration for Cloud Run
+cloudRunOptions:
+  memory: 1Gi
+  cpu: 1
+  minInstances: 0
+  maxInstances: 100
+  concurrency: 1000
+  timeoutSeconds: 300
+# It does not detect metadata
+# metadata:
+#   adapterPackageName: "@sveltejs/adapter-node"
+#   adapterVersion: "5.2.12"
+#   framework: "@sveltejs/kit"
+#   frameworkVersion: "2.21.0"
+#   description: "SvelteKit App"
+#   packageManager: "pnpm"
+#   workingDirectory: "apps/svelte"
