@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {},
   "private": true,
+  "devDependencies": {},
   "dependencies": {
     "@nx/js": "21.1.3",
     "@swc-node/register": "~1.9.1",

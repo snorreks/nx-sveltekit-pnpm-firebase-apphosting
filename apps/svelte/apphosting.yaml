@@ -20,12 +20,12 @@ cloudRunOptions:
   maxInstances: 100
   concurrency: 1000
   timeoutSeconds: 300
-# It does not detect metadata
-# metadata:
-#   adapterPackageName: "@sveltejs/adapter-node"
-#   adapterVersion: "5.2.12"
-#   framework: "@sveltejs/kit"
-#   frameworkVersion: "2.21.0"
-#   description: "SvelteKit App"
-#   packageManager: "pnpm"
-#   workingDirectory: "apps/svelte"
+
+# Metadata for Firebase App Hosting
+metadata:
+  adapterPackageName: "@sveltejs/adapter-node"
+  adapterVersion: "5.2.12"
+  framework: "@sveltejs/kit"
+  frameworkVersion: "2.16.0"
+  description: "SvelteKit App"
+  packageManager: "pnpm"
